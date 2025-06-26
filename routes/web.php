@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TeaController;
 use App\Http\Controllers\TeaDetailController;
@@ -7,9 +8,11 @@ use App\Http\Controllers\AuthController;
 
 
 
-Route::get('', function () {
-    return view('welcome');
-});
+// Route::get('', function () {
+//     return view('welcome');
+// });
+
+Route::get('', [WelcomeController::class, 'greeting']);
 
 Route::get('/about', function () {
     return view('about.index', ["name" => "Abhi"]);
