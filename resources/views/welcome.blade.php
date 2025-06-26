@@ -6,8 +6,8 @@
     {{-- <link rel="stylesheet" href="{{ mix('resources/css/app.css') }}"> --}}
     @vite(['resources/css/app.css'])
 </head> 
-<body class="bg-gray-900">
-    <div class="text-white m-auto flex flex-col justify-center items-center min-h-screen">
+<body class="bg-blue-900">
+    <div class="text-black m-auto flex flex-col justify-center items-center min-h-screen">
         <h2>Hii</h2>
     </div>
 </body>

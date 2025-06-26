@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TeaController;
 use App\Http\Controllers\TeaDetailController;
+use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
+
+
+Route::get('', function () {
     return view('welcome');
 });
 
@@ -37,3 +40,13 @@ Route::get('/chai', [TeaController::class, 'index2']);
 // });
 
 Route::get('chai/{id}', [TeaDetailController::class, 'teadetails']);
+
+
+Route::get('/register', [AuthController::class, 'ShowRegisterForm']);
+
+Route::post('/register', [AuthController::class, 'Register']);
+
+Route::get('/login', [AuthController::class, 'showLoginForm']);
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/dashboard', [AuthController::class, 'showDashboard']);
